@@ -63,7 +63,7 @@ Screenshot: `submission/screenshots/cost-and-tokens.png`.
 | 2026-06-29 22:08 ICT | restored `day23-app` | command output from alert drill |
 | 2026-06-29 22:09 ICT | alert resolved | `submission/screenshots/alertmanager-resolved.png` |
 
-Slack webhook was still the placeholder value in `.env`, so I could not produce real Slack fire/resolve screenshots on this machine. Alertmanager did fire and resolve locally; after adding a real `SLACK_WEBHOOK_URL`, rerun `make alert` and capture `slack-firing.png` / `slack-resolved.png`.
+Slack webhook was configured on 2026-06-30 and a direct test message was accepted by Slack. I then reran `make alert`; `ServiceDown` fired after 18 polling intervals, the app was restored, and the alert resolved. Slack fire/resolve messages should be captured as `submission/screenshots/slack-firing.png` and `submission/screenshots/slack-resolved.png` from the selected Slack channel.
 
 ### One thing surprised me about Prometheus / Grafana
 
